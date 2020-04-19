@@ -5,7 +5,6 @@ html {
 }
 
 body, html {
-    
 margin: 0;
 padding: 0;
 font-family: Helvetica, bold;
@@ -25,12 +24,32 @@ padding: 2;
 border-radius: .5rem;
 margin: 1rem;
 font-size: 2rem;
+padding: 1rem .5rem;
 transition: all .07s ease;
 width: 10rem;
 text-align: center;
 color: greenyellow;
-background: rgba(0,0,0,0.4);
+background: rgb(0, 0, 0);
 text-shadow: 0 0 .5rem black;
 }
 
-.playing
+.playing {
+transform: scale(1.1);
+border-color: rgb(255, 255, 49);
+background: red;
+color: black;
+box-shadow: 0 0 01rem rgb(12, 237, 253);
+}
+
+kbd {
+    display: block;
+    font-size: rem;
+}
+
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: rgb(255, 0, 0);
+}
