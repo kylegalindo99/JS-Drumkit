@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drum Kit
+    <title>Syncussion Drummer
     </title>
-</head>
-<body>
-
-    <audio data-key='49' src="sounds/Syncussion/tape drums/wasc_drykick_deepnlong03_tape.wav">KICK</audio>
-    <audio data-key='50' src='/sounds//Syncussion//tape drums/wasc_bonus_snare_slick8082_tape.wav'>SNARE</audio>
-    <audio data-key='51' src="/sounds/Syncussion/tape drums/wasc_bonus_hat_crush_tape.wav">CLOSED HI HAT</audio>
-    <audio data-key='52' src='/sounds/Syncussion/tape drums/wasc_bonus_hat_bling_tape.wav'>OPEN HI HAT</audio>
-    <audio data-key='53' src='/sounds/Syncussion/tape drums/wasc_bonus_hat_synhit_tape.wav'>RIDE</audio>
-    <audio data-key='54' src='/sounds/Syncussion/tape drums/wasc_tom_discolo_tape.wav'>TOM</audio>
-    <audio data-key='55' src='/sounds/Syncussion/tape drums/wasc_tom_tripped_tape.wav'>PERC</audio>
-    <audio data-key='56' src='/sounds/Syncussion/tape drums/wasc_perc_node_tape.wav'>PERC 2</audio>
-    <audio data-key='57' src='/sounds/Syncussion/tape drums/wasc_sp12_perc_clave_tape.wav'>CLAVE</audio>
-
+    <link rel="stylesheet" href="style.css" </head> 
     
-</body>
+    <body>
+    <h1>SYNCUSSION</h1>
+    <div class-"keys">
+        <div data-key="49" class="key">
+            <kbd>1</kbd>
+            <span class="sound">KICK</span>
+        </div>
+        <div data-key="50" class="key">
+            <span class="sound">SNARE</span>
+        </div>
+        <div data-key="51" class="key">
+
+            <span class="sound">HI-HAT CLSD</span>
+        </div>
+        <div data-key="52" class="key">
+            <span class="sound">HI-HAT OPEN</span>
+        </div>
+        <div data-key="53" class="key">
+            <span class="sound">CLAP</span>
+        </div>
+        <div data-key="54" class="key">
+            <span class="sound">TOM</span>
+        </div>
+        <div data-key="55" class="key">
+            <span class="sound">PERC 1</span>
+        </div>
+        <div data-key="56" class="key">
+            <span class="sound">PERC 2</span>
+        </div>
+
+    </div>
+
+
+    <audio data-key="49" src="sounds/Syncussion/tape drums/wasc_drykick_deepnlong03_tape.wav"></audio>
+    <audio data-key='50' src='/sounds//Syncussion//tape drums/wasc_bonus_snare_slick8082_tape.wav'></audio>
+    <audio data-key='51' src="/sounds/Syncussion/tape drums/wasc_bonus_hat_crush_tape.wav"></audio>
+    <audio data-key='52' src='/sounds/Syncussion/tape drums/wasc_bonus_hat_bling_tape.wav'></audio>
+    <audio data-key='53' src='/sounds/Syncussion/tape drums/wasc_bonus_hat_synhit_tape.wav'></audio>
+    <audio data-key='54' src='/sounds/Syncussion/tape drums/wasc_tom_discolo_tape.wav'></audio>
+    <audio data-key='55' src='/sounds/Syncussion/tape drums/wasc_tom_tripped_tape.wav'></audio>
+    <audio data-key='56' src='/sounds/Syncussion/tape drums/wasc_perc_node_tape.wav'></audio>
+    <audio data-key='57' src='/sounds/Syncussion/tape drums/wasc_sp12_perc_clave_tape.wav'></audio>
+
+    <script>
+        window.addEventListener('keydown', function (e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+            if(!audio) return;
+            audio.currenTime = 0;
+            audio.play();
+            console.log(key)
+        })
+    </script>
+    </body>
+
 </html>

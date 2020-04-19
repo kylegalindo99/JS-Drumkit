@@ -1,0 +1,36 @@
+html {
+    font-size: 20px;
+    color: blueviolet;
+    background: black;
+}
+
+body, html {
+    
+margin: 0;
+padding: 0;
+font-family: Helvetica, bold;
+}
+
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+border: .1rem solid pink;
+padding: 2;
+border-radius: .5rem;
+margin: 1rem;
+font-size: 2rem;
+transition: all .07s ease;
+width: 10rem;
+text-align: center;
+color: greenyellow;
+background: rgba(0,0,0,0.4);
+text-shadow: 0 0 .5rem black;
+}
+
+.playing
