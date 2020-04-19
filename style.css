@@ -36,7 +36,7 @@ text-shadow: 0 0 .5rem black;
 .playing {
 transform: scale(1.1);
 border-color: rgb(255, 255, 49);
-background: red;
+background: rgb(255, 0, 221);
 color: black;
 box-shadow: 0 0 01rem rgb(12, 237, 253);
 }
@@ -51,5 +51,5 @@ kbd {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    color: rgb(255, 0, 0);
+    color: rgb(30, 255, 0);
 }
